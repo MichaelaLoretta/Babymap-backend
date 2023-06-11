@@ -1,0 +1,30 @@
+{
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.startupEditor": "none",
+  "editor.formatOnSave": true,
+  "editor.fontWeight": "normal",
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.fontSize": 16,
+  "git.autofetch": true,
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.wordWrap": "on",
+  "prettier.endOfLine": "auto",
+  "prettier.requireConfig": true,
+  "editor.tabSize": 2,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": -1,
+  "workbench.iconTheme": "material-icon-theme",
+  "explorer.confirmDelete": false,
+  "eslint.format.enable": true,
+  "json.schemas": [
+  
+    
+  ]
+}
