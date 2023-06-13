@@ -112,12 +112,12 @@ const mutation = new GraphQLObjectType({
     addPlayground: {
       type: PlaygroundType,
       args: {
-        name: { type: GraphQLNonNull(GraphQLString) },
-        description: { type: GraphQLNonNull(GraphQLString) },
-        lat: { type: GraphQLNonNull(GraphQLFloat) },
-        lng: { type: GraphQLNonNull(GraphQLFloat) },
-        address: { type: GraphQLNonNull(GraphQLString) },
-        url: { type: GraphQLNonNull(GraphQLString) },
+        name: { type: new GraphQLNonNull(GraphQLString) },
+        description: { type: new GraphQLNonNull(GraphQLString) },
+        lat: { type: new GraphQLNonNull(GraphQLFloat) },
+        lng: { type: new GraphQLNonNull(GraphQLFloat) },
+        address: { type: new GraphQLNonNull(GraphQLString) },
+        url: { type: new GraphQLNonNull(GraphQLString) },
       },
       resolve(parent, args) {
         let playground = new Playground({
@@ -134,7 +134,7 @@ const mutation = new GraphQLObjectType({
     deletePlayground: {
       type: PlaygroundType,
       args: {
-        id: { type: GraphQLNonNull(GraphQLID) },
+        id: { type: new GraphQLNonNull(GraphQLID) },
       },
       resolve(parent, args) {
         return Playground.findByIdAndRemove(args.id);
@@ -143,7 +143,7 @@ const mutation = new GraphQLObjectType({
     updatePlayground: {
       type: PlaygroundType,
       args: {
-        id: { type: GraphQLNonNull(GraphQLID) },
+        id: { type: new GraphQLNonNull(GraphQLID) },
         name: { type: GraphQLString },
         description: { type: GraphQLString },
         lat: { type: GraphQLFloat },
@@ -172,12 +172,12 @@ const mutation = new GraphQLObjectType({
     addDiaperStation: {
       type: DiaperStationType,
       args: {
-        name: { type: GraphQLNonNull(GraphQLString) },
-        description: { type: GraphQLNonNull(GraphQLString) },
-        lat: { type: GraphQLNonNull(GraphQLFloat) },
-        lng: { type: GraphQLNonNull(GraphQLFloat) },
-        address: { type: GraphQLNonNull(GraphQLString) },
-        url: { type: GraphQLNonNull(GraphQLString) },
+        name: { type: new GraphQLNonNull(GraphQLString) },
+        description: { type: new GraphQLNonNull(GraphQLString) },
+        lat: { type: new GraphQLNonNull(GraphQLFloat) },
+        lng: { type: new GraphQLNonNull(GraphQLFloat) },
+        address: { type: new GraphQLNonNull(GraphQLString) },
+        url: { type: new GraphQLNonNull(GraphQLString) },
       },
       resolve(parent, args) {
         let diaperStation = new DiaperStation({
@@ -194,7 +194,7 @@ const mutation = new GraphQLObjectType({
     deleteDiaperStation: {
       type: DiaperStationType,
       args: {
-        id: { type: GraphQLNonNull(GraphQLID) },
+        id: { type: new GraphQLNonNull(GraphQLID) },
       },
       resolve(parent, args) {
         return DiaperStation.findByIdAndRemove(args.id);
@@ -203,7 +203,7 @@ const mutation = new GraphQLObjectType({
     updateDiaperStation: {
       type: DiaperStationType,
       args: {
-        id: { type: GraphQLNonNull(GraphQLID) },
+        id: { type: new GraphQLNonNull(GraphQLID) },
         name: { type: GraphQLString },
         description: { type: GraphQLString },
         lat: { type: GraphQLFloat },
@@ -233,12 +233,12 @@ const mutation = new GraphQLObjectType({
     addNursingRoom: {
       type: NursingRoomType,
       args: {
-        name: { type: GraphQLNonNull(GraphQLString) },
-        description: { type: GraphQLNonNull(GraphQLString) },
-        lat: { type: GraphQLNonNull(GraphQLFloat) },
-        lng: { type: GraphQLNonNull(GraphQLFloat) },
-        address: { type: GraphQLNonNull(GraphQLString) },
-        url: { type: GraphQLNonNull(GraphQLString) },
+        name: { type: new GraphQLNonNull(GraphQLString) },
+        description: { type: new GraphQLNonNull(GraphQLString) },
+        lat: { type: new GraphQLNonNull(GraphQLFloat) },
+        lng: { type: new GraphQLNonNull(GraphQLFloat) },
+        address: { type: new GraphQLNonNull(GraphQLString) },
+        url: { type: new GraphQLNonNull(GraphQLString) },
       },
       resolve(parent, args) {
         let nursingRoom = new NursingRoom({
@@ -255,7 +255,7 @@ const mutation = new GraphQLObjectType({
     deleteNursingRoom: {
       type: NursingRoomType,
       args: {
-        id: { type: GraphQLNonNull(GraphQLID) },
+        id: { type: new GraphQLNonNull(GraphQLID) },
       },
       resolve(parent, args) {
         return NursingRoom.findByIdAndRemove(args.id);
@@ -264,7 +264,7 @@ const mutation = new GraphQLObjectType({
     updateNursingRoom: {
       type: NursingRoomType,
       args: {
-        id: { type: GraphQLNonNull(GraphQLID) },
+        id: { type: new GraphQLNonNull(GraphQLID) },
         name: { type: GraphQLString },
         description: { type: GraphQLString },
         lat: { type: GraphQLFloat },
